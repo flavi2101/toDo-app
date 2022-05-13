@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="./index.js" defer></script>
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <picture>
+          <source
+            media="(prefers-color-scheme: dark) and (max-width: 599px)"
+            srcset="./assets/images/bg-mobile-dark.jpg"
+          />
+          <img
+            src="./assets/images/bg-mobile-light.jpg"
+            alt="background-image"
+          />
+        </picture>
+        <h1>TODO</h1>
+        <picture id="mode-icon">
+          <source
+            media="(prefers-color-scheme: dark)"
+            srcset="./assets/images/icon-sun.svg"
+          />
+          <img
+            class="mode-img"
+            src="./assets/images/icon-moon.svg"
+            alt="mode-icon"
+            aria-label="toggle dark mode"
+          />
+        </picture>
+        <p>
+          <label>
+            <input
+              id="todo"
+              type="text"
+              class="todo"
+              name="todo"
+              placeholder="Create a new to do..."
+              required="required"
+            />
+            <img
+              id="addTodoHandler"
+              src="./assets/images/icon-check.svg"
+              alt="check"
+            />
+          </label>
+        </p>
+
+        <div class="circle-decoration" id="circle-decoration"></div>
+      </header>
+      <div class="container-list">
+        <ul></ul>
+        <div class="resume-list">
+          <p><span id="quantity"></span> items left</p>
+          <button id="clear_all">Clear Completed</button>
+        </div>
+      </div>
+      <footer>
+        <button id="all">All</button>
+        <button id="active">Active</button>
+        <button id="completed">Completed</button>
+      </footer>
+      <address>
+        Challenge by
+        <a href="https://www.frontendmentor.io/home">frontEndMentor</a>. Code by
+        <a href="https://www.linkedin.com/in/flavio2101/" target="_blank"
+          >@flavioFerreira</a
+        >
+      </address>
+    </main>
+  </body>
+</html>

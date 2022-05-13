@@ -1,0 +1,253 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light: ;
+    --dark: initial;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --light: initial;
+    --dark: ;
+  }
+}
+
+@media screen and (min-width: 599px) {
+  * {
+    font-size: 18px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  :root.dark {
+    --light: ;
+    --dark: initial;
+  }
+  :root.light {
+    --dark: ;
+    --light: initial;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--light, hsl(234, 39%, 85%)) var(--dark, hsl(235, 21%, 11%));
+    min-block-size: 100vh;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    max-inline-size: 100%;
+  }
+
+  picture:nth-child(3n + 1) img {
+    inline-size: 100vw;
+    block-size: 198px;
+  }
+
+  h1 {
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    inset-block-start: 25px;
+    inset-inline-start: 1.4rem;
+    letter-spacing: 0.5rem;
+  }
+
+  h1 + picture {
+    position: absolute;
+    inset-block-start: 2.4rem;
+    inset-inline-end: 10%;
+  }
+
+  .mode-img {
+    position: absolute;
+    inset-inline-end: 100%;
+    block-size: 1em;
+  }
+
+  header p {
+    position: absolute;
+    justify-self: auto;
+    inset-inline-end: 0;
+    inset-inline-start: 0;
+    inset-block-start: 12%;
+  }
+  label {
+    position: relative;
+  }
+
+  label input {
+    inline-size: 85%;
+    display: block;
+    margin-inline: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    border-radius: 5px;
+    border: solid 1px var(--light, hsl(0, 0%, 98%)) var(--dark, hsl(237, 14%, 26%));
+    background-color: var(--light, hsl(0, 0%, 98%)) var(--dark, hsl(237, 14%, 26%));
+  }
+
+  input::placeholder {
+    color: var(--light, hsl(234, 11%, 52%)) var(--dark, hsl(0, 0%, 98%));
+    font-size: 0.6rem;
+  }
+
+  input:focus {
+    border: none;
+    outline-style: none;
+  }
+
+  input + img {
+    border-radius: 100%;
+    background-color: var(--light, hsl(233, 14%, 35%)) var(--dark, hsl(0, 2%, 54%));
+    padding: 3px;
+    block-size: 1rem;
+    inline-size: 1rem;
+    position: absolute;
+    inset-block-start: 29%;
+    inset-inline-end: 10.7%;;
+  }
+
+  .circle-decoration {
+    position: absolute;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    inline-size: 1rem;
+    block-size: 1rem;
+    inset-block-start: 16.7%;
+    inset-inline-start: 10%;
+  }
+
+  .container-list {
+    position: absolute;
+    align-self: center;
+    inline-size: 85%;
+    block-size: calc(60vh);
+    background-color: var(--light, hsl(0, 0%, 98%)) var(--dark, hsl(237, 14%, 26%));
+    border-radius: 5px;
+    inset-block-start: 24%;
+    /* inset-block-end: 20%; */
+  }
+  ul {
+    position: absolute;
+    max-block-size: 90%;
+    min-block-size: 90%;
+    background-color: inherit;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    inline-size: 100%;
+    margin-inline: 0;
+    margin-block: 0;
+    padding-inline: 0;
+    overflow-y: auto;
+  }
+
+  li {
+    text-decoration: none;
+    padding-inline: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--light, hsl(232, 17%, 83%)) var(--dark, hsla(0, 0%, 98%, 0.318));
+  }
+
+  li > .img {
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    border-radius: 100%;
+    inline-size: 1.2rem;
+    block-size: 1.2rem;
+    margin-inline: 0;
+    padding: 0.2rem;
+    cursor: pointer;
+    background-color: var(--light, white) var(--dark, white);
+  }
+
+  li > .img.set {
+    background: linear-gradient(0,hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+  }
+
+  .img.set + p {
+    text-decoration: line-through;
+    color: rgb(191, 182, 182);
+  }
+
+  li > img + p {
+    flex: 5;
+    padding-inline-start: 1rem;
+    color: var(--light, rgba(0, 0, 0, 0.4)) var(--dark, hsl(0, 0%, 98%));
+  }
+  .delete-item {
+    background-color: var(--light, inherit) var(--dark, hsl(0, 0%, 98%));
+    border-radius: 100%;
+    padding: 0.1rem;
+    inline-size: 0.9rem;
+    block-size: 0.9rem;
+  }
+
+  .resume-list {
+    padding-inline: 12px;
+    position: absolute;
+    block-size: fit-content;
+    inset-inline-start: 10px;
+    inset-inline-end: 0%;
+    inset-block-end: 2%;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .resume-list * {
+    color: gray;
+    background-color: var(--light, hsl(0, 0%, 98%)) var(--dark, hsl(237, 14%, 26%));
+    border: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+
+  footer {
+    position: absolute;
+    inset-block-start: 77%;
+    inset-inline-start: 17%;
+    display: flex;
+    /* background-color: var(--light, hsl(0, 0%, 98%)) var(--dark, hsl(237, 14%, 26%)); */
+    border-radius: 0.5rem;
+    inline-size: 60%;
+    /* margin-inline: auto; */
+    /* margin-block-start: auto; */
+    margin-block-end: 18px;
+    block-size: 6%;
+    justify-content: space-evenly;
+    /* padding-inline: 1rem; */
+  }
+
+  footer button {
+    color: var(--light, hsl(234, 11%, 52%)) var(--dark, hsl(0, 0%, 98%));
+    font-weight: bold;
+    background-color: var(--light, hsl(0, 0%, 98%)) var(--dark, hsl(237, 14%, 26%));
+    border: none;
+    font-size: 0.7rem;
+  }
+
+  footer button:hover {
+    color: blue;
+  }
+
+  address,
+  address * {
+    font-size: 0.6rem;
+    color: var(--light, hsl(234, 11%, 52%)) var(--dark, hsl(0, 0%, 98%));
+    font-style: inherit;
+  }
+  address {
+    position: absolute;
+    inset-block-end: 3%;
+  }
+}
