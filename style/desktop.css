@@ -73,8 +73,8 @@
   header p {
     position: absolute;
     justify-self: auto;
-    inset-inline-end: 0;
-    inset-inline-start: 0;
+    inset-inline-start: 26.5%;
+    inset-inline-end: 26.5%;
     inset-block-start: 12%;
   }
   label {
@@ -127,7 +127,9 @@
   .container-list {
     position: absolute;
     align-self: center;
-    inline-size: 85%;
+    /* inline-size: 85%; */
+    inset-inline-start: 30%;
+    inset-inline-end: 30%;
     block-size: calc(60vh);
     background-color: var(--light, hsl(0, 0%, 98%)) var(--dark, hsl(237, 14%, 26%));
     border-radius: 5px;
@@ -217,15 +219,13 @@
     inset-block-start: 77%;
     inset-inline-start: 17%;
     display: flex;
-    /* background-color: var(--light, hsl(0, 0%, 98%)) var(--dark, hsl(237, 14%, 26%)); */
     border-radius: 0.5rem;
-    inline-size: 60%;
-    /* margin-inline: auto; */
-    /* margin-block-start: auto; */
+    inset-inline-start: 38%;
+    inset-inline-end: 40%;
     margin-block-end: 18px;
     block-size: 6%;
     justify-content: space-evenly;
-    /* padding-inline: 1rem; */
+
   }
 
   footer button {
